@@ -577,14 +577,14 @@ Things to note: version 5" was only for one elevator, now incorporate a loop for
     }
 
 
-'Version 9  -need to add a checker to see if elevator is full. if is, then dont even go do checking floors. 
-            -need to also have a execute command on being idle on either the top or the lowest. if the e is there. they 
+'Version 9  -need to also have a execute command on being idle on either the top or the lowest. if the e is there. they 
             have to pick up.  
 
             improvments done on this version -> added UpDown counter to determine which to prioritize.
             -> smarten the passing floor event. the incoming floor will supercede the other floors. 
             -> smarten the floor_button_pressed event. now, the RemoveFloorFromQueue removes the elevator"s current floor
                 not the future floor from the queue. 
+            -> Added a checker to see if elevator is full. if is, then dont even go do checking floors on passing. 
             '
 
      {
@@ -736,3 +736,4 @@ Things to note: version 5" was only for one elevator, now incorporate a loop for
             // We normally don't need to do anything here
         }
     }
+
